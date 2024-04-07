@@ -55,7 +55,8 @@ img {
 /* ---------header-------------- */
 .header {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1, 0.08;
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     border-bottom: 1px solid #e7e9fc;
 }
 
@@ -84,17 +85,17 @@ img {
     color: #2e2f42;
 }
 
-.rheade-menu-list {
+.header-menu-list {
     gap: 40px;
     display: flex;
+    position: relative;
     /* padding-top: 24px;
     padding-bottom: 24px; */
 }
 
-.rheade-menu-list::after {
+.header-menu-link.one {
     color: #404bbf;
-    position: relative;
-    content: "";
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link {
@@ -107,6 +108,16 @@ img {
     color: #2e2f42;
 }
 
+.header-menu-link.one::after{
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
 .header-menu-link:hover,
 .header-menu-link:focus {
     color: #404bbf;
@@ -122,6 +133,14 @@ img {
     /* margin-left: auto; */
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.address-menu-item:first-child {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-menu-item:last-child {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-menu-link {
